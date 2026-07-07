@@ -39,3 +39,30 @@ Running commit update to trigger Dependabot Review Workflow
 <img width="917" alt="screenshot showing Dependabot working on Version Updates" src="https://github.com/dependabot/demo/assets/886768/4adf5727-255a-4ae1-97f7-70e94dc1134b">
 
 After a few minutes, you should get some more PRs!
+
+### Security updates are vulnerability-driven; version updates are freshness-driven.
+
+Dependabot security updates open PRs when GitHub detects a known vulnerable dependency in your project and a safer version is available.
+Dependabot version updates open PRs to keep dependencies up to date more generally, even when there’s no known security issue.
+In this repo’s README:
+
+Under Enabling Security Updates, it says Dependabot will create PRs for detected security vulnerabilities.
+Under Enabling Version Updates, it references the dependabot.yml config, which controls routine dependency update behavior.
+Practical difference:
+
+### Why the PR is created
+
+Security update: fix a known CVE/advisory.
+Version update: move to newer dependency versions proactively.
+What triggers it
+
+Security update: vulnerability detection from GitHub’s security alerts.
+Version update: the dependabot.yml schedule/config and available newer releases.
+Goal
+
+Security update: reduce immediate security risk.
+Version update: reduce staleness, keep compatibility current, and avoid big upgrade jumps later.
+Urgency
+
+Security updates are usually higher priority.
+Version updates are usually maintenance wor
